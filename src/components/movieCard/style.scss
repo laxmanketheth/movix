@@ -1,0 +1,59 @@
+@import "../../mixins.scss";
+
+// .slider{
+//     border: 2px solid;
+//     height: 420px;
+// }
+
+.cardItem {
+    // border: 1px solid orange;
+    height: 380px;
+    width: 200px;
+    transition: transform 0.3s ease;
+    & :hover {
+        cursor: pointer;
+    }
+}
+
+.cardItem:hover {
+    transform: scale(1.05);
+}
+
+.cardimage {
+    width: 97%;
+    height: auto;
+}
+
+.card-item-body {
+    display: flex;
+    flex-direction: column;
+    // text-align: center;
+    line-height: 150%;
+
+    &>h3 {
+        font-size: larger;
+    }
+
+    &>p {
+        display: none;
+
+        @include sm {
+            display: block;
+        }
+
+    }
+}
+
+.carouselTitle {
+    color: white;
+    height: 30px;
+    font-size: 24px;
+    line-height: 20px;
+    margin-bottom: 15px;
+    // border: 2px solid;
+
+    @include md {
+        font-size: 24px;
+        line-height: 24px;
+    }
+}
